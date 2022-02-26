@@ -1,0 +1,13 @@
+<form [formGroup]="signup" >
+    FirstName: <input type="text" placeholder="Please enter first name"  formControlName="firstname">
+    <span class="error" *ngIf="signup.controls?.['firstname']?.touched&&signup.controls['firstname']?.invalid&&signup.controls?.['firstname']?.errors?.['required']">Firstname is requred</span>
+    <br><br>
+    LastName: <input type="text" placeholder="Please enter last name" formControlName="lastname">
+    <span class="error"></span>
+    <br>
+    City: <input type="text" placeholder="Please enter City" formControlName="city">
+    <span class="error"></span>
+    <br>
+    <input type="submit" value="Submit" (click)="SendData()">
+</form>
+{{msg}}
